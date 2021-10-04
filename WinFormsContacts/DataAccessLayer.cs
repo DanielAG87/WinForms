@@ -9,7 +9,7 @@ namespace WinFormsContacts
 {
     class DataAccessLayer
     {
-        private SqlConnection conn = new SqlConnection("");
+        private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=PruebaVideo;Data Source=DESKTOP-NI3B7E0\\SQLEXPRESS");
 
         public void InsertContacto(Contacto contacto)
         {

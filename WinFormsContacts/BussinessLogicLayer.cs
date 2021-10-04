@@ -17,7 +17,25 @@ namespace WinFormsContacts
 
         public Contacto SaveContacto(Contacto contacto)
         {
+            
+                if (contacto.Id == 0)
+                    InsertContacto(contacto);
+                else
+                    UpdateContacto(contacto);
+                return contacto;
+            
+        }
+        public Contacto InsertContacto(Contacto contacto)
+        {
             _dataAccessLayer.InsertContacto(contacto);
+
+            return contacto;
+
+        }
+
+        public Contacto UpdateContacto(Contacto contacto)
+        {
+            _dataAccessLayer.UpdateContacto(contacto);
 
             return contacto;
         }
